@@ -31,10 +31,10 @@ body::after {
 	content: '';
 	display: block;
 	top: -265px;
-	left: 40%;
+	left: 45%;
 	position: absolute;
-	width: 610px;
-	height: 629px;
+	width: 30rem;
+	height: 30rem;
 	background-image: url('../images/details_tecnology.png');
 	background-size: cover; 
 	background-repeat: no-repeat;
@@ -66,10 +66,15 @@ body::after {
 	border: solid 3px #ffffff;
 }
 
+.button--menu {
+	display: none;
+}
+
 .footer {
 	position: fixed;
 	bottom: 55px;
 }
+
 .list {
 	list-style: none;
 }
@@ -121,4 +126,92 @@ body::after {
 
 .modal-open {
 	display: block;
+}
+
+
+@media (max-width: 769px) {
+	.header::after {
+		top: -315px;
+		left: 60%;
+		width: 20rem;
+		height: 20rem;
+	}	
+}
+
+@media (max-width: 601px) {
+	.mobile-off {
+		display: none;
+	}
+
+	body::after {
+		display: none;
+	}
+
+	.header::after {
+		top: -280px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 16rem;
+		height: 16rem;
+	}
+
+	.container {
+		margin-left: 0;
+		text-align: center;
+	}
+
+	.title {
+		font-size: 32px;
+		margin: 300px 0 0;
+	}
+
+	.paragraph {
+		margin: 15px;
+		font-size: 18px;
+	}
+
+	.button--menu {
+		display: block;
+		position: fixed;
+		top: 10px;
+		right: 10px;
+		z-index: 10;
+	}
+
+	.footer {
+		position: fixed;
+		top: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: #4b58df;
+		transform: translateX(150%);
+		transition: 0.5s;
+	}
+
+	.list {
+		margin: auto;
+		padding: 0;
+		border: solid 3px #fff;
+	}
+
+	.list__item {
+			display: block;
+			box-sizing: border-box;
+			width: 100%;
+	}
+
+	.list__item a {
+		font-size: 30px;
+		color: #ffffff;
+		text-decoration: none;
+		color: #ffffff;
+		margin: 40px 0;
+		width: 100%;
+		display: block;
+		text-align: center;
+	}
+
+	.menu-open {
+		transform: translateX(0);
+	}
 }

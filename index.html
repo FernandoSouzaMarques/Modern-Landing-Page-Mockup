@@ -13,8 +13,8 @@
 		<header class="header">
 			<h1 class="title">Creating resources</h1>
 			<p class="paragraph">
-				Lorem ipsum dolor sit amet, consectetur adi <br/>
-				piscing elit, sed do eiusmod tempor incididunt <br/>
+				Lorem ipsum dolor sit amet, consectetur adi <br class="mobile-off" />
+				piscing elit, sed do eiusmod tempor incididunt <br class="mobile-off" />
 				ut labore et dolore magna aliqua. 
 			</p>
 			<button class="button" data-modal-open><strong>Learn More</strong></button>
@@ -34,7 +34,14 @@
 			</div>
 
 		</header>
-		<footer class="footer">
+
+		<div>
+			<button class="button button--menu" data-menu>
+				Menu
+			</button>
+		</div>
+
+		<footer class="footer" data-footer>
 			<nav class="menu">
 				<ul class="list">
 					<li class="list__item list__item--is-active">
@@ -66,6 +73,7 @@
 	<script type="text/javascript">
 		var modal = document.querySelector('[data-modal-open]');
 		var btnClose = document.querySelector('[data-modal-close]');
+		var btnMenu = document.querySelector('[data-menu]');
 
 		modal.addEventListener('click', function(e){
 			document.querySelector('[data-modal]').classList.add('modal-open');
@@ -74,6 +82,11 @@
 		btnClose.addEventListener('click', function(e){
 			document.querySelector('[data-modal]').classList.toggle('modal-open');
 		});
+
+		btnMenu.addEventListener('click', function(e){
+			document.querySelector('[data-footer]').classList.toggle('menu-open');
+		});
+
 	</script>
 
 
