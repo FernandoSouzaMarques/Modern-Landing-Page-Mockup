@@ -1,9 +1,21 @@
+// Variables
+	// Colors
+	$color-blue-default: #4b58df;
+	$color-white: #fff;
+	$color-black: #000;
+
+	// Fonts
+	$font-family-main: 'Open Sans', Arial;
+
+// ----
+
+
 body {
 	margin: 0;
 	padding: 0;
-	background-color: #4b58df; 
-	color: #ffffff;
-	font-family: 'Open Sans', Arial;
+	background-color: $color-blue-default; 
+	color: $color-white;
+	font-family: $font-family-main;
 }
 
 body::after {
@@ -52,18 +64,19 @@ body::after {
 }
 
 .button {
-	background-color: #ffffff;
-	border: solid 3px #4b58df;
+	background-color: $color-white;
+	border: solid 3px $color-blue-default;
 	border-radius: 20px;
+	outline: none;
 	padding: 10px 8px;
-	color: #4b58df;
+	color: $color-blue-default;
 	font-weight: bold;
 }
 
 .button:hover {
-	color: #ffffff;
-	background-color: #4b58df; 
-	border: solid 3px #ffffff;
+	color: $color-white;
+	background-color: $color-blue-default; 
+	border: solid 3px $color-white;
 }
 
 .button--menu {
@@ -87,9 +100,9 @@ body::after {
 
 .list__item a {
 	font-size: 20px;
-	color: #ffffff;
+	color: $color-white;
 	text-decoration: none;
-	color: #ffffff;
+	color: $color-white;
 	margin: 0 15px;
 	width: 100%;
 	display: block;
@@ -120,8 +133,27 @@ body::after {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	color: #000000;
-	padding: 20px;
+	font-family: $font-family-main;
+	color: $color-black;
+	padding: 30px;
+}
+
+.modal__title {
+	color: $color-blue-default;
+	font-size: 25px;
+}
+
+.modal_text {
+	text-align: justify;
+}
+
+.modal__button {
+	padding-left: 20px;
+	padding-right: 20px;
+	position: fixed;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .modal-open {
@@ -170,12 +202,19 @@ body::after {
 		font-size: 18px;
 	}
 
+	.button--learn {
+		position: fixed;
+		bottom: 50px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
 	.button--menu {
 		display: block;
 		position: fixed;
 		top: 10px;
 		right: 10px;
-		z-index: 10;
+		z-index: 9;
 	}
 
 	.footer {
@@ -183,14 +222,15 @@ body::after {
 		top: 0;
 		width: 100vw;
 		height: 100vh;
-		background-color: #4b58df;
+		background-color: $color-blue-default;
 		transform: translateX(150%);
 		transition: 0.5s;
 	}
 
 	.list {
-		margin: auto;
+		margin: 0;
 		padding: 0;
+		height: 99vh;
 		border: solid 3px #fff;
 	}
 
@@ -202,9 +242,9 @@ body::after {
 
 	.list__item a {
 		font-size: 30px;
-		color: #ffffff;
+		color: $color-white;
 		text-decoration: none;
-		color: #ffffff;
+		color: $color-white;
 		margin: 40px 0;
 		width: 100%;
 		display: block;
@@ -213,5 +253,10 @@ body::after {
 
 	.menu-open {
 		transform: translateX(0);
+	}
+
+	.modal {
+		width: 75vw;
+		height: 70vh;
 	}
 }

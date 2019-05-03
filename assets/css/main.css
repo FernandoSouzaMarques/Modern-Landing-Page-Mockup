@@ -2,8 +2,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: #4b58df;
-  color: #ffffff;
-  font-family: 'Open Sans', Arial; }
+  color: #fff;
+  font-family: "Open Sans", Arial; }
 
 body::after {
   content: '';
@@ -45,17 +45,18 @@ body::after {
   font-size: 20px; }
 
 .button {
-  background-color: #ffffff;
+  background-color: #fff;
   border: solid 3px #4b58df;
   border-radius: 20px;
+  outline: none;
   padding: 10px 8px;
   color: #4b58df;
   font-weight: bold; }
 
 .button:hover {
-  color: #ffffff;
+  color: #fff;
   background-color: #4b58df;
-  border: solid 3px #ffffff; }
+  border: solid 3px #fff; }
 
 .button--menu {
   display: none; }
@@ -74,9 +75,9 @@ body::after {
 
 .list__item a {
   font-size: 20px;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
-  color: #ffffff;
+  color: #fff;
   margin: 0 15px;
   width: 100%;
   display: block;
@@ -104,8 +105,24 @@ body::after {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  color: #000000;
-  padding: 20px; }
+  font-family: "Open Sans", Arial;
+  color: #000;
+  padding: 30px; }
+
+.modal__title {
+  color: #4b58df;
+  font-size: 25px; }
+
+.modal_text {
+  text-align: justify; }
+
+.modal__button {
+  padding-left: 20px;
+  padding-right: 20px;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%); }
 
 .modal-open {
   display: block; }
@@ -142,12 +159,18 @@ body::after {
     margin: 15px;
     font-size: 18px; }
 
+  .button--learn {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%); }
+
   .button--menu {
     display: block;
     position: fixed;
     top: 10px;
     right: 10px;
-    z-index: 10; }
+    z-index: 9; }
 
   .footer {
     position: fixed;
@@ -159,8 +182,9 @@ body::after {
     transition: 0.5s; }
 
   .list {
-    margin: auto;
+    margin: 0;
     padding: 0;
+    height: 99vh;
     border: solid 3px #fff; }
 
   .list__item {
@@ -170,15 +194,19 @@ body::after {
 
   .list__item a {
     font-size: 30px;
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
-    color: #ffffff;
+    color: #fff;
     margin: 40px 0;
     width: 100%;
     display: block;
     text-align: center; }
 
   .menu-open {
-    transform: translateX(0); } }
+    transform: translateX(0); }
+
+  .modal {
+    width: 75vw;
+    height: 70vh; } }
 
 /*# sourceMappingURL=main.css.map */
