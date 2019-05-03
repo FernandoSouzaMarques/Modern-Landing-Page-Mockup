@@ -136,6 +136,33 @@ body::after {
 	font-family: $font-family-main;
 	color: $color-black;
 	padding: 30px;
+
+	& a {
+		color: $color-blue-default;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.modal__list {
+  list-style: none;
+  margin: 10px 0;
+  padding: 0;
+
+	& li {
+		border-radius: 10px;
+		display: block;
+		width: 150px;
+		height: 16px;
+		margin: 10px 0;
+
+		& p {
+			margin: 0;
+		}
+	}
 }
 
 .modal__title {
